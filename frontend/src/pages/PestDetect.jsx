@@ -5,9 +5,12 @@ export default function PestDetect() {
   const [result, setResult] = useState("");
 
   const analyze = async () => {
-    const res = await API.post("/api/pest-detect");
-    setResult(`${res.data.disease} - ${res.data.solution}`);
-  };
+  const res = await API.post("/api/pest-detect", {
+    crop: "Rice", // later replace with selected crop
+  });
+  setResult(`${res.data.disease} - ${res.data.solution}`);
+};
+
 
   return (
     <div>
