@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advisory Results - CropCare</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1 class="logo"><a href="index.html">CropCare</a></h1>
+                <ul class="nav-links">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="advisory.html">New Advisory</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="#" id="logoutBtn">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="result-main">
+        <div class="container">
+            <div class="result-header">
+                <h2>Your Crop Advisory Results</h2>
+                <p class="result-date">Generated on: <span id="advisoryDate">[Date & Time]</span></p>
+            </div>
+
+            <div class="result-content">
+                <section class="result-card primary-recommendation">
+                    <h3>Recommended Crops</h3>
+                    <div class="crop-recommendations" id="cropRecommendations">
+                        <div class="crop-item">
+                            <div class="crop-name">[Crop Name 1]</div>
+                            <div class="crop-suitability">Suitability: <span class="high">[High/Medium/Low]</span></div>
+                            <div class="crop-details">[Brief description of why this crop is recommended]</div>
+                        </div>
+                        <div class="crop-item">
+                            <div class="crop-name">[Crop Name 2]</div>
+                            <div class="crop-suitability">Suitability: <span class="medium">[High/Medium/Low]</span></div>
+                            <div class="crop-details">[Brief description of why this crop is recommended]</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="result-card">
+                    <h3>Soil Analysis Summary</h3>
+                    <div class="analysis-grid">
+                        <div class="analysis-item">
+                            <span class="label">Soil Type:</span>
+                            <span class="value" id="soilTypeResult">[Soil Type]</span>
+                        </div>
+                        <div class="analysis-item">
+                            <span class="label">pH Level:</span>
+                            <span class="value" id="phResult">[pH Value]</span>
+                        </div>
+                        <div class="analysis-item">
+                            <span class="label">Nitrogen:</span>
+                            <span class="value" id="nitrogenResult">[N%]</span>
+                        </div>
+                        <div class="analysis-item">
+                            <span class="label">Phosphorus:</span>
+                            <span class="value" id="phosphorusResult">[P%]</span>
+                        </div>
+                        <div class="analysis-item">
+                            <span class="label">Potassium:</span>
+                            <span class="value" id="potassiumResult">[K%]</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="result-card">
+                    <h3>Climate Compatibility</h3>
+                    <div class="climate-info" id="climateInfo">
+                        <div class="climate-item">
+                            <span class="label">Temperature Range:</span>
+                            <span class="value">[Temperature] - Suitable for [crops]</span>
+                        </div>
+                        <div class="climate-item">
+                            <span class="label">Humidity Level:</span>
+                            <span class="value">[Humidity]% - [Assessment]</span>
+                        </div>
+                        <div class="climate-item">
+                            <span class="label">Rainfall:</span>
+                            <span class="value">[Rainfall]mm - [Assessment]</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="result-card">
+                    <h3>Farming Recommendations</h3>
+                    <div class="recommendations" id="farmingRecommendations">
+                        <div class="recommendation-item">
+                            <h4>Soil Preparation</h4>
+                            <p>[Soil preparation recommendations based on analysis]</p>
+                        </div>
+                        <div class="recommendation-item">
+                            <h4>Fertilizer Suggestions</h4>
+                            <p>[Fertilizer recommendations based on NPK levels]</p>
+                        </div>
+                        <div class="recommendation-item">
+                            <h4>Planting Schedule</h4>
+                            <p>[Best planting times based on season and climate]</p>
+                        </div>
+                        <div class="recommendation-item">
+                            <h4>Irrigation Guidelines</h4>
+                            <p>[Watering recommendations based on rainfall and humidity]</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="result-actions">
+                <button type="button" class="btn btn-secondary" onclick="window.print()">Download PDF</button>
+                <a href="feedback.html" class="btn btn-primary">Provide Feedback</a>
+                <a href="advisory.html" class="btn btn-outline">New Advisory</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

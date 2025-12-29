@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Advisory - CropCare</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1 class="logo"><a href="index.html">CropCare</a></h1>
+                <ul class="nav-links">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="advisory.html" class="active">New Advisory</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="#" id="logoutBtn">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="advisory-main">
+        <div class="container">
+            <div class="advisory-header">
+                <h2>Get Crop Advisory</h2>
+                <p>Provide your farm details to receive personalized crop recommendations</p>
+            </div>
+
+            <form class="advisory-form" id="advisoryForm">
+                <div class="form-section">
+                    <h3>Soil Information</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="soilType">Soil Type</label>
+                            <select id="soilType" name="soilType" required>
+                                <option value="">Select soil type</option>
+                                <option value="clay">Clay</option>
+                                <option value="sandy">Sandy</option>
+                                <option value="loamy">Loamy</option>
+                                <option value="silt">Silt</option>
+                                <option value="peaty">Peaty</option>
+                                <option value="chalky">Chalky</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="soilPh">Soil pH</label>
+                            <input type="number" id="soilPh" name="soilPh" min="0" max="14" step="0.1" placeholder="6.5">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nitrogen">Nitrogen (N) %</label>
+                            <input type="number" id="nitrogen" name="nitrogen" min="0" max="100" step="0.1">
+                        </div>
+                        <div class="form-group">
+                            <label for="phosphorus">Phosphorus (P) %</label>
+                            <input type="number" id="phosphorus" name="phosphorus" min="0" max="100" step="0.1">
+                        </div>
+                        <div class="form-group">
+                            <label for="potassium">Potassium (K) %</label>
+                            <input type="number" id="potassium" name="potassium" min="0" max="100" step="0.1">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Climate & Location</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="temperature">Average Temperature (°C)</label>
+                            <input type="number" id="temperature" name="temperature" step="0.1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="humidity">Humidity (%)</label>
+                            <input type="number" id="humidity" name="humidity" min="0" max="100" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="rainfall">Annual Rainfall (mm)</label>
+                            <input type="number" id="rainfall" name="rainfall" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="season">Current Season</label>
+                            <select id="season" name="season" required>
+                                <option value="">Select season</option>
+                                <option value="spring">Spring</option>
+                                <option value="summer">Summer</option>
+                                <option value="monsoon">Monsoon</option>
+                                <option value="autumn">Autumn</option>
+                                <option value="winter">Winter</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Farm Details</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="farmSize">Farm Size (acres)</label>
+                            <input type="number" id="farmSize" name="farmSize" min="0.1" step="0.1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cropPreference">Crop Preference (Optional)</label>
+                            <input type="text" id="cropPreference" name="cropPreference" placeholder="e.g., Rice, Wheat, Corn">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="additionalNotes">Additional Notes</label>
+                        <textarea id="additionalNotes" name="additionalNotes" rows="3" placeholder="Any specific requirements or concerns..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="history.back()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Get Advisory</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

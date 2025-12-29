@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - CropCare</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1 class="logo"><a href="index.html">CropCare</a></h1>
+                <ul class="nav-links">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="advisory.html">New Advisory</a></li>
+                    <li><a href="feedback.html" class="active">Feedback</a></li>
+                    <li><a href="#" id="logoutBtn">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="feedback-main">
+        <div class="container">
+            <div class="feedback-header">
+                <h2>Share Your Feedback</h2>
+                <p>Help us improve AgriAdvisor by sharing your experience and suggestions</p>
+            </div>
+
+            <form class="feedback-form" id="feedbackForm">
+                <div class="form-section">
+                    <h3>Advisory Experience</h3>
+                    <div class="form-group">
+                        <label for="advisoryId">Recent Advisory (Optional)</label>
+                        <select id="advisoryId" name="advisoryId">
+                            <option value="">Select an advisory to review</option>
+                            <option value="advisory1">[Advisory Date] - [Crop Type]</option>
+                            <option value="advisory2">[Advisory Date] - [Crop Type]</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Overall Satisfaction</label>
+                        <div class="rating-group">
+                            <input type="radio" id="rating5" name="rating" value="5">
+                            <label for="rating5">⭐⭐⭐⭐⭐ Excellent</label>
+                            
+                            <input type="radio" id="rating4" name="rating" value="4">
+                            <label for="rating4">⭐⭐⭐⭐ Good</label>
+                            
+                            <input type="radio" id="rating3" name="rating" value="3">
+                            <label for="rating3">⭐⭐⭐ Average</label>
+                            
+                            <input type="radio" id="rating2" name="rating" value="2">
+                            <label for="rating2">⭐⭐ Poor</label>
+                            
+                            <input type="radio" id="rating1" name="rating" value="1">
+                            <label for="rating1">⭐ Very Poor</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Detailed Feedback</h3>
+                    <div class="form-group">
+                        <label for="accuracy">How accurate were the recommendations?</label>
+                        <select id="accuracy" name="accuracy" required>
+                            <option value="">Select accuracy level</option>
+                            <option value="very-accurate">Very Accurate</option>
+                            <option value="mostly-accurate">Mostly Accurate</option>
+                            <option value="somewhat-accurate">Somewhat Accurate</option>
+                            <option value="not-accurate">Not Accurate</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="usefulness">How useful were the farming recommendations?</label>
+                        <select id="usefulness" name="usefulness" required>
+                            <option value="">Select usefulness level</option>
+                            <option value="very-useful">Very Useful</option>
+                            <option value="useful">Useful</option>
+                            <option value="somewhat-useful">Somewhat Useful</option>
+                            <option value="not-useful">Not Useful</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="implementation">Did you implement the recommendations?</label>
+                        <select id="implementation" name="implementation">
+                            <option value="">Select implementation status</option>
+                            <option value="fully-implemented">Fully Implemented</option>
+                            <option value="partially-implemented">Partially Implemented</option>
+                            <option value="planning-to-implement">Planning to Implement</option>
+                            <option value="not-implemented">Not Implemented</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Additional Comments</h3>
+                    <div class="form-group">
+                        <label for="improvements">What improvements would you suggest?</label>
+                        <textarea id="improvements" name="improvements" rows="4" placeholder="Share your suggestions for improving our service..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="additionalComments">Any other comments?</label>
+                        <textarea id="additionalComments" name="additionalComments" rows="4" placeholder="Share any other thoughts or experiences..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Contact Information (Optional)</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contactName">Name</label>
+                            <input type="text" id="contactName" name="contactName" placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email</label>
+                            <input type="email" id="contactEmail" name="contactEmail" placeholder="your.email@example.com">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="followUp">
+                            I'm open to follow-up questions about my feedback
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="history.back()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Submit Feedback</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

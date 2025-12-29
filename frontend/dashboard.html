@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - CropCare</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1 class="logo"><a href="index.html">CropCare</a></h1>
+                <ul class="nav-links">
+                    <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="advisory.html">New Advisory</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="#" id="logoutBtn">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="container">
+            <div class="dashboard-header">
+                <h2>Welcome back, <span id="farmerName">[Farmer Name]</span></h2>
+                <p>Farm Location: <span id="farmLocation">[Farm Location]</span></p>
+            </div>
+
+            <div class="dashboard-grid">
+                <section class="dashboard-card">
+                    <h3>Quick Actions</h3>
+                    <div class="action-buttons">
+                        <a href="advisory.html" class="btn btn-primary">Get Crop Advisory</a>
+                        <a href="feedback.html" class="btn btn-secondary">Submit Feedback</a>
+                    </div>
+                </section>
+
+                <section class="dashboard-card">
+                    <h3>Recent Advisories</h3>
+                    <div class="advisory-list" id="recentAdvisories">
+                        <div class="advisory-item">
+                            <div class="advisory-date">[Date]</div>
+                            <div class="advisory-crop">[Crop Type]</div>
+                            <div class="advisory-status">Completed</div>
+                        </div>
+                        <div class="advisory-item">
+                            <div class="advisory-date">[Date]</div>
+                            <div class="advisory-crop">[Crop Type]</div>
+                            <div class="advisory-status">Completed</div>
+                        </div>
+                        <div class="empty-state">
+                            <p>No recent advisories found</p>
+                            <a href="advisory.html">Create your first advisory</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="dashboard-card">
+                    <h3>Weather Overview</h3>
+                    <div class="weather-info" id="weatherInfo">
+                        <div class="weather-current">
+                            <div class="temperature">[Temperature]°C</div>
+                            <div class="condition">[Weather Condition]</div>
+                        </div>
+                        <div class="weather-details">
+                            <div class="weather-item">
+                                <span>Humidity:</span>
+                                <span>[Humidity]%</span>
+                            </div>
+                            <div class="weather-item">
+                                <span>Rainfall:</span>
+                                <span>[Rainfall]mm</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="dashboard-card">
+                    <h3>Farm Statistics</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">[Number]</div>
+                            <div class="stat-label">Total Advisories</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">[Number]</div>
+                            <div class="stat-label">Crops Analyzed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">[Number]</div>
+                            <div class="stat-label">Feedback Submitted</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
