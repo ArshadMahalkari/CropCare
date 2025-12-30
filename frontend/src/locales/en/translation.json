@@ -1,0 +1,16 @@
+{
+  "title": "AI-powered Crop Advisory for Small Farmers",
+  "subtitle": "Personalized, reliable, and easy-to-understand crop advisories — optimized for low-bandwidth and local languages.",
+  "get_advisory": "Get Advisory",
+  "learn_more": "Learn more",
+  "why_title": "Why CropCare?",
+  "why_points": ["Rule-based, explainable advisories", "Multilingual-ready (English, Hindi, Marathi)", "Offline-friendly & progressive"],
+  "advisory_input": "Advisory Input",
+  "crop_label": "Crop",
+  "soil_label": "Soil type",
+  "language_label": "Language",
+  "advisory_result_title": "Advisory Result",
+  "no_advisory_yet": "No advisory yet. Submit inputs to get a personalized advisory.",
+  "analyzing": "Analyzing inputs — this usually takes a few seconds.",
+  "failed_fetch": "Failed to fetch advisory at this time"
+}
