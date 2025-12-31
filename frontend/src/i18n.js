@@ -4,11 +4,23 @@ import { initReactI18next } from 'react-i18next';
 import en from './locales/en/translation.json';
 import hi from './locales/hi/translation.json';
 import mr from './locales/mr/translation.json';
+import ta from './locales/ta/translation.json';
+import te from './locales/te/translation.json';
+import kn from './locales/kn/translation.json';
+import gu from './locales/gu/translation.json';
+import pa from './locales/pa/translation.json';
+import bn from './locales/bn/translation.json';
 
 const resources = {
   en: { translation: en },
   hi: { translation: hi },
   mr: { translation: mr },
+  ta: { translation: ta },
+  te: { translation: te },
+  kn: { translation: kn },
+  gu: { translation: gu },
+  pa: { translation: pa },
+  bn: { translation: bn },
 };
 
 i18n
@@ -19,6 +31,7 @@ i18n
     fallbackLng: 'en',
     interpolation: { escapeValue: false },
     react: { useSuspense: false },
+    debug: false,
   });
 
 export default i18n;

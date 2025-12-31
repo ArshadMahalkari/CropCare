@@ -126,3 +126,188 @@ mongo-data/
 # Local configuration
 config/local.json
 local.json
+
+# Backup files
+*.bak
+*.backup
+*.orig
+*.swp
+*.tmp
+
+# System files
+*.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editor files
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+*.sublime-project
+*.sublime-workspace
+.idea/
+*.iml
+
+# Package manager files
+yarn.lock
+pnpm-lock.yaml
+.pnpm-debug.log*
+
+# Build and cache directories
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.vuepress/dist/
+.serverless/
+.fusebox/
+
+# Runtime and process files
+.pm2/
+.grunt/
+.lock-wscript
+lib-cov/
+coverage/
+.nyc_output/
+.node_repl_history
+*.tgz
+.yarn-integrity
+
+# Environment and secrets
+.env.backup
+.env.*.backup
+*.pem
+*.key
+*.cert
+*.crt
+secrets/
+private/
+
+# Database files
+*.sqlite
+*.sqlite3
+*.db
+data/
+mongodb-data/
+mongo-data/
+redis-data/
+
+# Media and uploads
+uploads/
+public/uploads/
+media/
+static/uploads/
+temp/
+tmp/
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+
+# Documentation build
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.docusaurus/
+
+# Miscellaneous
+.sass-cache/
+connect.lock
+typings/
+.history/
+.eslintcache
+.stylelintcache
+
+# GitHub-specific
+.github/workflows/secrets
+*.patch
+*.diff
+
+# IDE and Editor specific
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+.vscode/tasks.json
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# OS-specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Backup files
+*.bak
+*.backup
+*.orig
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Local development
+local/
+temp/
+tmp/
+scratch/
+playground/
+
+# Performance and monitoring
+.clinic/
+.0x/
+flamegraph.html
+isolate-*.log
+v8.log
+
+# Security
+.env.backup
+.env.*.backup
+secrets/
+private/
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.pfx
+
+# Database dumps
+*.sql
+*.dump
+*.backup
+
+# Large files that shouldn't be in git
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+*.mkv
+*.iso
+*.dmg

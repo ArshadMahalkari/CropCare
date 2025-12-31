@@ -20,23 +20,44 @@ export const AppProvider = ({ children }) => {
   });
 
   useEffect(() => {
-    // initialize i18n language
-    i18n.changeLanguage(language.toLowerCase());
+    // Initialize i18n language
+    const langCode = language.toLowerCase();
+    i18n.changeLanguage(langCode);
     localStorage.setItem('language', language);
+    
+    // Update body data attribute for language-specific styling
+    document.body.setAttribute('data-lang', langCode);
+    
+    // Update document direction for RTL languages if needed
+    document.documentElement.dir = ['ar', 'ur'].includes(langCode) ? 'rtl' : 'ltr';
 
-    // expose setter for legacy UI pieces (safe fallback)
-    try { window.__react_app_setLanguage = (l) => setLanguage(l); } catch {}
+    // Expose setter for legacy UI pieces (safe fallback)
+    try { 
+      window.__react_app_setLanguage = (l) => setLanguage(l); 
+    } catch (e) {
+      console.warn('Could not set global language setter:', e);
+    }
 
     return () => {
-      try { delete window.__react_app_setLanguage; } catch {}
+      try { 
+        delete window.__react_app_setLanguage; 
+      } catch (e) {
+        // Silent cleanup
+      }
     };
   }, [language]);
 
   const setLanguage = (lang) => {
     const upper = (lang || 'EN').toUpperCase();
+    console.log('Setting language to:', upper);
     setLanguageState(upper);
-    i18n.changeLanguage(upper.toLowerCase());
+    
+    const langCode = upper.toLowerCase();
+    i18n.changeLanguage(langCode);
     localStorage.setItem('language', upper);
+    
+    // Update body data attribute immediately
+    document.body.setAttribute('data-lang', langCode);
   };
 
   const login = (token, userData) => {
